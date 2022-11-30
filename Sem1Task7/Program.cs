@@ -1,11 +1,11 @@
-﻿string? inputLine = Console.ReadLine();
+﻿//Напишите программу, которая на вход трехзначное число и на выход показывает последнюю цифру этого числа
+string? inputB = Console.ReadLine();
 
-if (inputLine != null)
+if (inputB != null)
 {
-    int inputNumber = int.Parse(inputLine);
+    int inputC = int.Parse(inputB);
 
-    int lastDigit = inputNumber % 10;
-
-
+// % целочисленное деление, вычисление остатка от деления
+    int lastDigit = inputC % 10; 
     Console.WriteLine(lastDigit);
 }

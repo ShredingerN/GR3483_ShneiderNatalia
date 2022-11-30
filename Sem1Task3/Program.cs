@@ -1,10 +1,12 @@
-﻿//Считываем данные с консоли
-strin? inputLine = Console.ReadLine();
+﻿//Нахождение дня недели по введеному пользователем числу
+//Считываем данные с консоли
+string? inputLine = Console.ReadLine();
 //Проверяем, чтобы данные были не пустыми
-if (inputLine != null)
+if (inputLine!= null)
 {
-    //    //Создаем массив с днями недели
-    string[] dayOfWeek = new string[7];
+     //Создаем массив с днями недели (массив обозначается как тип данных+кв.скобки)
+    string[] dayOfWeek = new string[7];// new - застяавляет окмпьютер выделить память для переменной
+    //дальше по очереди обращаемся к каждой ячейке массива
     dayOfWeek[0] = "понедельник";
     dayOfWeek[1] = "вторник";
     dayOfWeek[2] = "среда";
@@ -13,13 +15,17 @@ if (inputLine != null)
     dayOfWeek[5] = "суббота";
     dayOfWeek[6] = "воскресенье";
     //Парсим введенное число
-    int inputNumber = int.Parse(inputLine);
+        int inputNumber = int.Parse(inputLine);
 
-    //Находим название дня недели по введенному номеру
-    string outDayOfWeek = dayOfWeek[inputNumber-1];
-    Console.WriteLine(outDayOfWeek);
+//     //Находим название дня недели по введенному номеру
+//     //string outDayOfWeek = dayOfWeek[inputNumber-1];
+//     //Console.WriteLine(outDayOfWeek);
+//     // чтобы сопоставить корректно номера массива, нужно -1: человек введет например 5, что соотвестует индексу 4
+Console.WriteLine(dayOfWeek[inputNumber-1]); 
 }
-    // switch (inputNumber)
+    //оператор switch case
+    // string outDayOfWeek = string.Empty;
+    // switch (inputNumber) 
     // {
     //     case 1: outDayOfWeek = "понедельник"; break;
     //     case 2: outDayOfWeek = "вторник"; break;
@@ -34,6 +40,6 @@ if (inputLine != null)
     //string outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputNumber));
 
 
-    // Выводим данные в консоль 
-    //Console.WriteLine(outDayOfWeek);
-//}
+    //Выводим данные в консоль 
+//     Console.WriteLine(outDayOfWeek);
+// }

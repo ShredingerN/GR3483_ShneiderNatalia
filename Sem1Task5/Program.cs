@@ -1,10 +1,10 @@
-﻿//Считываем данные с консоли
+﻿//Напишите программу, которое принимает на входе число одно n, а на выходе показывает все целые число от n до -n
+//Считываем данные с консоли
 string? inputLine = Console.ReadLine();
 
 //Проверяем, чтобы данные были не пустыми
 if(inputLine!=null)
 {
-
    //Парсим введенное число
    int inputNumber = int.Parse(inputLine);
 
@@ -13,13 +13,13 @@ if(inputLine!=null)
    //Выходное значение
    string outLine = string.Empty;
 
-   while(startNumber<inputNumber)
+   while(startNumber<=inputNumber)
    {
       outLine = outLine + startNumber + ", ";
       startNumber++;
       //startNumber=startNumber+1;
    }
-   outLine = outLine + inputNumber;
+   //outLine = outLine + inputNumber;
 
    // Выводим данные в консоль 
    Console.WriteLine(outLine);
