@@ -35,5 +35,4 @@ if (number1L != null && number2L != null && number3L != null)
     //использовала функцию Math.Max
     int max = Math.Max(Math.Max(num1, num2), num3);
     Console.WriteLine(max);
-
 }

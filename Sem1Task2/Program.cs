@@ -10,12 +10,11 @@ if (number1L != null && number2L != null)
     int num2 = int.Parse(number2L);
     //Сравниваем два числа
     if (num1 > num2)
-    {   
-        Console.WriteLine("max="+num1);
+    {
+        Console.WriteLine("max=" + num1);
     }
     else
     {
-        Console.WriteLine("max="+num2);
+        Console.WriteLine("max=" + num2);
     }
-
 }
