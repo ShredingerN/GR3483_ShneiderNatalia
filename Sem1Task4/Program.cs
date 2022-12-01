@@ -9,6 +9,8 @@ if (number1L != null && number2L != null && number3L != null)
     int num1 = int.Parse(number1L);
     int num2 = int.Parse(number2L);
     int num3 = int.Parse(number3L);
+
+    // ВАРИАНТ 1
     // //Сравниваем поочередно 3 числа
     // if (num1 > num2)
     // {   
@@ -32,6 +34,7 @@ if (number1L != null && number2L != null && number3L != null)
     //         Console.WriteLine("max="+num3);
     //     }
     // }
+    //ВАРИАНТ 2
     //использовала функцию Math.Max
     int max = Math.Max(Math.Max(num1, num2), num3);
     Console.WriteLine(max);

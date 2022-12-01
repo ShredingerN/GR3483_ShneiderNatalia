@@ -19,7 +19,7 @@ if(inputLine!=null)
       startNumber++;
       //startNumber=startNumber+1;
    }
-   //outLine = outLine + inputNumber;
+   outLine = outLine + inputNumber;
 
    // Выводим данные в консоль 
    Console.WriteLine(outLine);
