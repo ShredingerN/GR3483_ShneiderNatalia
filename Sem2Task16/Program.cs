@@ -1,9 +1,9 @@
 ﻿// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого
-void TestSQRT(int i, int j)
+void TestSQRT(int num1, int num2)
 {
-    bool res = (i / j == j);
-    if (res == true) Console.WriteLine("Число " + i + " является квадратом " + j);
-    else Console.WriteLine("Число "  + i + " не является квадратом " + j);
+    bool res = (num1 / num2 == num2);
+    if (res == true) Console.WriteLine("Число " + num1 + " является квадратом " + num2);
+    else Console.WriteLine("Число "  + num1 + " не является квадратом " + num2);
 }
 int number1 = int.Parse(Console.ReadLine() ?? "0");
 int number2 = int.Parse(Console.ReadLine() ?? "0");
