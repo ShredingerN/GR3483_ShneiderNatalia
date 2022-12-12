@@ -1,17 +1,14 @@
 ﻿// Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
 
-int quoter = ReadData("Введите четверть");
-PrintAnswer(quoter);
-
 //Метода читает данные от пользователя
 int ReadData(string msg)
 {
     Console.WriteLine(msg);
     return int.Parse(Console.ReadLine() ?? "0");
 }
+int quoter = ReadData("Введите четверть");
 
 //Метод определяет по координатам точки
-
 void PrintAnswer(int num)
 {
 if (num > 0 && num < 5)
@@ -23,5 +20,5 @@ if (num > 0 && num < 5)
     }
 else Console.WriteLine("Вы ввели не номер четверти!");
 }
-
+PrintAnswer(quoter);
 
