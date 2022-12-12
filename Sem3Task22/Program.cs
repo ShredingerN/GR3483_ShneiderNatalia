@@ -37,13 +37,11 @@ int ReadData(string msg)
 }
 
 
-int n = ReadData ("Введите число: ");
+// int n = ReadData ("Введите число: ");
 
-string line = LineBuilder(n);
+// string line = LineBuilder(n);
 
-Console.WriteLine(line);
-
-
+// Console.WriteLine(line);
 
 // // Метод читает данные от пользователя
 // int ReadData(string msg) 
