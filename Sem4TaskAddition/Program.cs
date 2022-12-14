@@ -15,8 +15,9 @@ string[] SplitNames (string names)
 // Метод для выбора случайного имени.
 string GetRandom(string [] arrNames)
 {
-    Random rnd = new Random();
-    int i = rnd.Next(1, (arrNames.Length) + 1);
+    // Random rnd = new Random();
+    // int i = rnd.Next(1, (arrNames.Length) + 1);
+    int i = new Random().Next(1, (arrNames.Length) + 1);
     string result = arrNames[i];
     return result;
 }
