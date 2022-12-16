@@ -15,7 +15,8 @@ int[] GenArr(int len, int minVAlue, int maxValue)
     }
     return arr;
 }
-
+// Чтобы сделать инверсию исходного массива, нужно каждый элемент
+// умножить на -1. (хотя мне кажется, что нужно было переставить элементы с конца в начало)
 int[] InverseArr(int[]arr)
 {
     int[]outArr = new int[arr.Length];

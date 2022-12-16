@@ -37,3 +37,4 @@ string resNames = GetRandom (arrayNames);
 PrintData("Who does for beer? =) :"+ resNames);
 
 
+// можно запиндюрить все в один метод и будет красиво))

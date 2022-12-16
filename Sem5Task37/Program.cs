@@ -2,7 +2,7 @@
 // Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
 // Результат запишите в новом массиве.
 
-int[] array = GenArray(123,-100,100);
+int[] array = GenArray(21,-100,100);
 PrintArray(array);
 Console.WriteLine();
 int[] result = ConvertArr(array);

@@ -6,7 +6,7 @@ int result = SearchElem(array, num);
 
 if (result > 0)
 {
-    PrintData("Элемент найден в позиции" + result);
+    PrintData("Элемент найден в позиции: " + result);
 }
 else
 {
@@ -41,11 +41,12 @@ void Print1DArr(int[] arr)
     {
         Console.Write(arr[i] + ", ");
     }
-    Console.WriteLine(arr[arr.Length - 1]);
+    Console.WriteLine(arr[arr.Length-1]);
 }
 // Ищем элемент
 int SearchElem(int[] arr, int elem)
 {
+    // Индекс не может быть отрицательный, потому ставим -1 аналогично "false"
     int res = -1;
     for (int i = 0; i < arr.Length; i++)
     {

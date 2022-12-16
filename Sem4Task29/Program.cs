@@ -28,7 +28,7 @@ int[] GenArr(int num)
     int[] arr = new int[num];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(range1, range2);
+        arr[i] = rnd.Next(range1, range2+1);
     }
     return arr;
 }
