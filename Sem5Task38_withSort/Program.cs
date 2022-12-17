@@ -1,10 +1,10 @@
-﻿//  Задайте массив вещественных чисел. 
+﻿// Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива. 
 
 int min = int.MaxValue;
 int max = int.MinValue;
 
-int[] array = GenArray(120, -100, 1000);
+int[] array = GenArray(10, -100, 50);
 PrintD1Array(array);
 Console.WriteLine();
 
@@ -15,7 +15,8 @@ PrintD1Array(arraySort1);
 Console.WriteLine();
 
 DateTime d2 = DateTime.Now;
-int [] arraySort2 = CountingSort(array);
+int [] arraySort2 = CountingSort(array, array[array.Length-1]);
+// int [] arraySort2 = CountingSort(array);
 Console.WriteLine(DateTime.Now - d2);
 PrintD1Array(arraySort2);
 Console.WriteLine();
@@ -29,13 +30,13 @@ Console.WriteLine();
 MinMax(array);
 PrintData("Differency Max-Min = " + (max - min));
 
-int[] GenArray(int len, int minVAlue, int maxValue)
+int[] GenArray(int len, int minRange, int maxRange)
 {
     Random rnd = new Random();
     int[] arr = new int[len];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(minVAlue, maxValue + 1);
+        arr[i] = rnd.Next(minRange, maxRange + 1);
     }
     return arr;
 }
@@ -45,7 +46,7 @@ void PrintD1Array(int[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length - 1; i++)
     {
-        Console.Write(arr[i] + ",");
+        Console.Write(arr[i] + ", ");
     }
     Console.Write(arr[arr.Length - 1] + "]");
 }
@@ -64,7 +65,6 @@ void MinMax(int[] arr)
     }
     Console.WriteLine("Min number = " + min + "\nMax number = " + max);
 }
-
 // Метод сортировки вставками.
 int[] InsertionSort(int[] array)
 {
@@ -84,60 +84,25 @@ int[] InsertionSort(int[] array)
     }
     return array;
 }
-// Метод сортировки подсчетом.
-// -------------------------------------------------------------------------------------------------------------------------------------------------
-// У меня простой код, ниже закоменченный, не сработал, происходит переполнение типа данных((.
-// Почему, я так и не нашла.
-// int[] CountingSort(int[] array, int max)
-//     {
-//         int [] count = new int[max + 1];
-//         for (int i = 0; i < array.Length; i++)
-//         {
-//             count[array[i]]++;
-//         }
-//         int index = 0;
-//         for (int i = 0; i < count.Length; i++)
-//         {
-//             for (int j = 0; j < count[i]; j++)
-//             {
-//                 array[index] = i;
-//                 index++;
-//             }
-//         }
-//         return array;
-//     }
-// Воткнула сложный метод.
-// Оно работает, но как - я для себя так и не смогла объяснить. х-D
-// Я запнулась уже на этапе, почему размер массива счетчика int[] count = new int[max - min + 1] определяем как разницу max/min.
-// Мне здесь требуется допольнительное объяснение =D. 
-// ------------------------------------------------------------------------------------------------------------------------------------
-int[] CountingSort(int[] array)
+// Метод сортировки подсчетом
+int[] CountingSort(int[] array, int max)
 {
+    int [] count = new int[max+1];
     for (int i = 0; i < array.Length; i++)
     {
-         if (array[i] < min) min = array[i];
-         if (array[i] > max) max = array[i];
+        count[array[i]]++;
     }
-    int[] count = new int[max - min + 1];
-    int newIndex = 0;
-    for (int j = 0; j < count.Length; j++)
+    int index = 0;
+    for (int i = 0; i < count.Length; i++)
     {
-        count[j] = 0;
-    }
-    for (int i = 0; i < array.Length; i++)
-    {
-        count[array[i] - min]++;
-    }
-    for (int k = min; k <= max; k++)
-    {
-        while (count[k - min]-- > 0)
+        for (int j = 0; j < count[i]; j++)
         {
-            array[newIndex] = k;
-            ++newIndex;
+            array[index] = i;
+            index++;
         }
     }
     return array;
-} 
+}
 // Метод сортировки массива пузырьком.
 void Sort(int[] array)
 {
@@ -156,4 +121,32 @@ void Sort(int[] array)
     }
 }
 
-// ИТОГ: самый быстрый - пузырьковая сортировка, потом метод подсчета, метод вставки значительно медленнее. 
+
+
+// int[] CountingSort(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//          if (array[i] < min) min = array[i];
+//          if (array[i] > max) max = array[i];
+//     }
+//     int[] count = new int[max - min + 1];
+//     int newIndex = 0;
+//     for (int j = 0; j < count.Length; j++)
+//     {
+//         count[j] = 0;
+//     }
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         count[array[i] - min]++;
+//     }
+//     for (int k = min; k <= max; k++)
+//     {
+//         while (count[k - min]-- > 0)
+//         {
+//             array[newIndex] = k;
+//             ++newIndex;
+//         }
+//     }
+//     return array;
+// } 
