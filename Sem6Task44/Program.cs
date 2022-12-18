@@ -3,7 +3,6 @@
 int number = ReadData("Enter number: ");
 PrintData(FibNum(number));
 
-
 int ReadData(string msg)
 {
     Console.WriteLine(msg);
