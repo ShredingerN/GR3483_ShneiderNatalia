@@ -1,17 +1,17 @@
 ﻿// Напишите программу, которая перевернёт одномерный массив (последний элемент будет на первом месте, а первый - на последнем и т.д.)
 
 int[] arr = GenArray(20,1,100);
-Console.WriteLine("Исходны массив");
+Console.WriteLine("Исходный массив");
 Print1DArr(arr);
 
 int[] copyArr = SwapNewArray(arr);
-Console.WriteLine("Нивый массив перевернутый SwapNewArray методом");
+Console.WriteLine("Новый массив перевернутый SwapNewArray методом");
 Print1DArr(copyArr);
-Console.WriteLine("Исходны массив");
+Console.WriteLine("Исходный массив");
 Print1DArr(arr);
 
 int[] copyArrTwo = SwapArray(arr);
-Console.WriteLine("Исходны массив");
+Console.WriteLine("Исходный массив");
 Print1DArr(arr);
 Console.WriteLine("Исходный массив перевернутый SwapArray методом");
 Print1DArr(copyArrTwo);
