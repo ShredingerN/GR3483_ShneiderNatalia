@@ -1,7 +1,7 @@
 ﻿// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
-int inputNnumber = ReadData("Enter the amount of numbers : ");
-PrintData("The amount of positive numbers: " + CountPosNum(inputNnumber));
+int inputNumber = ReadData("Enter the amount of numbers : ");
+PrintData("The amount of positive numbers: " + CountPosNum(inputNumber));
 // Метод сичтывания введенных данных
 int ReadData(string msg)
 {
@@ -13,7 +13,7 @@ void PrintData(string res)
 {
     Console.WriteLine(res);
 }
-// Поиск количества положительных чисел.
+// Поиск кол-ва положительных чисел.
 int CountPosNum(int num)
 {
     int res = 0;
