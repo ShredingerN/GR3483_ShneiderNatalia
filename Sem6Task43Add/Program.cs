@@ -41,7 +41,7 @@ void PrintData(string msg)
 {
     double coorX1 = (b2 - b1) / (k1 - k2);
     double coorY1 = (k1 * b2 - k2 * b1) / (k1 - k2);
-    return res = (coorX1, coorY1);
+    return (coorX1, coorY1);
 }
 //Находим стороны треугольника, разбила на 3 отдельных метода, чтобы получить сразу переменные в double.
 double TriangleSide(double x1, double y1, double x2, double y2)
