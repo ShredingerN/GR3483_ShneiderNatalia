@@ -4,7 +4,7 @@
 int min = int.MaxValue;
 int max = int.MinValue;
 
-int[] array = GenArray(10, -100, 50);
+int[] array = GenArray(10, 0, 50);
 PrintD1Array(array);
 Console.WriteLine();
 
