@@ -1,29 +1,29 @@
 ﻿// Напишите программу, которая заполнит спирально массив 4 на 4.
 
 int n = 4;
-int[,] sqareMatrix = new int[n, n];
+int[,] matrix = new int[n, n];
 
 int temp = 1;
 int i = 0;
 int j = 0;
 
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+while (temp <= matrix.GetLength(0) * matrix.GetLength(1))
 {
-  sqareMatrix[i, j] = temp;
+  matrix[i, j] = temp;
   temp++;
-  if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
+  if (i <= j + 1 && i + j < matrix.GetLength(1) - 1)
     j++;
-  else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
+  else if (i < j && i + j >= matrix.GetLength(0) - 1)
     i++;
-  else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
+  else if (i >= j && i + j > matrix.GetLength(1) - 1)
     j--;
   else
     i--;
 }
+PrintArray(matrix);
 
-WriteArray(sqareMatrix);
-
-void WriteArray (int[,] array)
+// Печатаем массив
+void PrintArray(int[,] array)
 {
   for (int i = 0; i < array.GetLength(0); i++)
   {
